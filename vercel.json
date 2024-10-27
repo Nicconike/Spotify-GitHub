@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "redirects": [
+        {
+            "source": "/",
+            "destination": "https://github.com/Nicconike/Spotify-GitHub"
+        }
+    ],
+    "builds": [
+        {
+            "src": "api/now-playing.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/now-playing.js"
+        }
+    ]
+}
