@@ -57,7 +57,7 @@ export default async (_req, res) => {
         if (!response.ok) throw new Error('Failed to fetch track data');
 
         const data = await response.json();
-        saveToFile(data, 'spotify-data.json');
+        //saveToFile(data, 'spotify-data.json');
 
         if (isPlaying && data.item) {
             item = data.item;
