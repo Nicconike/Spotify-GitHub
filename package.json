@@ -1,0 +1,18 @@
+{
+    "name": "spotify-github",
+    "version": "1.0.0",
+    "description": "Now Playing on GitHub Profile",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Nicconike",
+    "license": "GPL-3.0-only",
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "node-fetch": "^3.3.2"
+    }
+}
