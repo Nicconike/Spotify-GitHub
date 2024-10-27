@@ -1,19 +1,21 @@
 import fetch from 'node-fetch';
-import fs from 'fs';
+// import fs from 'fs';
+// import dotenv from 'dotenv';
 
-function saveToFile(data, filename) {
-    if (data) {
-        fs.writeFile(filename, JSON.stringify(data, null, 4), 'utf8', (err) => {
-            if (err) {
-                console.error('Error saving data:', err);
-            } else {
-                console.log(`Data saved to ${filename}`);
-            }
-        });
-    } else {
-        console.log('No data to save');
-    }
-}
+// dotenv.config();
+// function saveToFile(data, filename) {
+//     if (data) {
+//         fs.writeFile(filename, JSON.stringify(data, null, 4), 'utf8', (err) => {
+//             if (err) {
+//                 console.error('Error saving data:', err);
+//             } else {
+//                 console.log(`Data saved to ${filename}`);
+//             }
+//         });
+//     } else {
+//         console.log('No data to save');
+//     }
+// }
 
 export default async (_req, res) => {
     try {
