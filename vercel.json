@@ -1,12 +1,5 @@
 {
     "version": 2,
-    "redirects": [
-        {
-            "source": "/",
-            "destination": "https://github.com/Nicconike/Spotify-GitHub",
-            "statusCode": 308
-        }
-    ],
     "builds": [
         {
             "src": "api/now-playing.js",
