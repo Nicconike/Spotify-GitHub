@@ -1,4 +1,19 @@
 import fetch from 'node-fetch';
+import fs from 'fs';
+
+function saveToFile(data, filename) {
+    if (data) {
+        fs.writeFile(filename, JSON.stringify(data, null, 4), 'utf8', (err) => {
+            if (err) {
+                console.error('Error saving data:', err);
+            } else {
+                console.log(`Data saved to ${filename}`);
+            }
+        });
+    } else {
+        console.log('No data to save');
+    }
+}
 
 export default async (_req, res) => {
     try {
@@ -40,6 +55,7 @@ export default async (_req, res) => {
         if (!response.ok) throw new Error('Failed to fetch track data');
 
         const data = await response.json();
+        saveToFile(data, 'spotify-data.json');
 
         if (isPlaying && data.item) {
             item = data.item;
